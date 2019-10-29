@@ -1,15 +1,16 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FileSystem
 {
     class Folder : FileSystemEssence
     {
-        private List<Folder> childrens = new List<Folder>();
-        private List<File> files = new List<File>();
-
         public DateTime DateCreated { get; set; }
+        private List<Folder> childrens;
+        private List<File> files;
 
         public List<Folder> GetChildrens()
         {
@@ -33,28 +34,6 @@ namespace FileSystem
 
         public Folder(string path)
         {
-            DirectoryInfo currentDirectory = new DirectoryInfo(path);
-            this.Name = currentDirectory.Name;
-            this.DateCreated = currentDirectory.CreationTime;
-
-            foreach (FileInfo fileInfo in currentDirectory.GetFiles())
-            {
-                File file = new File
-                {
-                    Name = fileInfo.Name,
-                    Path = fileInfo.FullName,
-                    Size = fileInfo.Length
-                };
-
-                SetFile(file);
-            }
-
-            foreach (DirectoryInfo directoryInfo in currentDirectory.GetDirectories())
-            {
-                Folder subFolder = new Folder(directoryInfo.FullName);
-
-                SetChildren(subFolder);
-            }
 
         }
         
