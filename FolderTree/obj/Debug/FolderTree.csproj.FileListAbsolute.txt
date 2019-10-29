@@ -8,3 +8,6 @@ Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.csproj.CoreCom
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.exe
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.pdb
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.FolderTreeWindow.resources
+Q:\Projects\FolderTree\FolderTree\FolderTree\bin\Debug\Newtonsoft.Json.dll
+Q:\Projects\FolderTree\FolderTree\FolderTree\bin\Debug\Newtonsoft.Json.xml
+Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.csproj.CopyComplete

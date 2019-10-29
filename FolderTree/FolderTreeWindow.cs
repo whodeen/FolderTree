@@ -3,6 +3,7 @@ using System.IO;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using FileSystem;
+using Newtonsoft.Json;
 
 namespace FolderTree
 {
@@ -29,15 +30,17 @@ namespace FolderTree
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            Folder folder = new Folder(pathTextBox.Text);
-            var json = new JavaScriptSerializer().Serialize(folder);
+            
             SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "JSON Files | *.json";
+            saveFileDialog.DefaultExt = "json";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                using(Stream s = System.IO.File.Open(saveFileDialog.FileName, FileMode.CreateNew))
-                using (StreamWriter sw = new StreamWriter(s))
+                using (StreamWriter file = System.IO.File.CreateText(saveFileDialog.FileName))
                 {
-                    sw.Write(json);
+                    Folder folder = new Folder(pathTextBox.Text);
+                    JsonSerializer serializer = new JsonSerializer();
+                    file.Write(JsonConvert.SerializeObject(folder, Formatting.Indented));
                 }
             }
         }

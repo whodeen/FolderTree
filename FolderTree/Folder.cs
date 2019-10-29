@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 namespace FileSystem
 {
-    class Folder : FileSystemEssence
+    class Folder 
     {
+        public string Name { get; set; }
+        public DateTime DateCreated { get; set; }
+
         public List<Folder> childrens = new List<Folder>();
         public List<File> files = new List<File>();
 
-        public DateTime DateCreated { get; set; }
 
      
         public Folder(string path)
