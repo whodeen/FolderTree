@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FileSystem.Properties
+namespace FolderTree.Properties
 {
 
 

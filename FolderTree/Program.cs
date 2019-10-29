@@ -20,6 +20,7 @@ namespace FolderTree
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FolderTreeWindow());
             
+            
 
         }
     }

@@ -52,6 +52,7 @@
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Save JSON";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // pathTextBox
             // 
@@ -60,7 +61,7 @@
             this.pathTextBox.Size = new System.Drawing.Size(253, 22);
             this.pathTextBox.TabIndex = 3;
             // 
-            // Form1
+            // FolderTreeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,8 +69,8 @@
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FolderTreeWindow";
+            this.Text = "FolderTree";
             this.ResumeLayout(false);
             this.PerformLayout();
 
