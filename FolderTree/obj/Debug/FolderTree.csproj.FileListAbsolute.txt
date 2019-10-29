@@ -2,9 +2,9 @@ Q:\Projects\FolderTree\FolderTree\FolderTree\bin\Debug\FolderTree.exe.config
 Q:\Projects\FolderTree\FolderTree\FolderTree\bin\Debug\FolderTree.exe
 Q:\Projects\FolderTree\FolderTree\FolderTree\bin\Debug\FolderTree.pdb
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.csprojAssemblyReference.cache
-Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.Form1.resources
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.Properties.Resources.resources
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.csproj.GenerateResource.cache
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.csproj.CoreCompileInputs.cache
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.exe
 Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.pdb
+Q:\Projects\FolderTree\FolderTree\FolderTree\obj\Debug\FolderTree.FolderTreeWindow.resources
