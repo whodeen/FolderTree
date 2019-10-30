@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace FileSystem
+namespace FileSystemTree
 {
     class TreeFolder : FileSystemEssence
     {

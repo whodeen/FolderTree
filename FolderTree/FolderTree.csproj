@@ -50,9 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileSystem\FileSystemEssence.cs" />
-    <Compile Include="FileSystem\File.cs" />
-    <Compile Include="FileSystem\TreeFolder.cs" />
+    <Compile Include="FileSystemTree\FileSystemEssence.cs" />
+    <Compile Include="FileSystemTree\TreeFile.cs" />
+    <Compile Include="FileSystemTree\TreeFolder.cs" />
     <Compile Include="FolderTreeWindow.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FolderTreeWindow));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(162, 55);
+            this.openButton.Location = new System.Drawing.Point(162, 65);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(103, 35);
             this.openButton.TabIndex = 0;
@@ -47,7 +48,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(12, 55);
+            this.saveButton.Location = new System.Drawing.Point(12, 65);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(103, 35);
             this.saveButton.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             this.warning.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.warning.ForeColor = System.Drawing.Color.Red;
-            this.warning.Location = new System.Drawing.Point(12, 95);
+            this.warning.Location = new System.Drawing.Point(12, 43);
             this.warning.Name = "warning";
             this.warning.Size = new System.Drawing.Size(253, 19);
             this.warning.TabIndex = 4;
@@ -76,11 +77,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 123);
+            this.ClientSize = new System.Drawing.Size(277, 105);
             this.Controls.Add(this.warning);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FolderTreeWindow";
             this.Text = "FolderTree";
             this.ResumeLayout(false);

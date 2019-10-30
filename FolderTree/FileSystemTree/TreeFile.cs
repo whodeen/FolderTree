@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FileSystem
+namespace FileSystemTree
 {
     class TreeFile : FileSystemEssence
     {
