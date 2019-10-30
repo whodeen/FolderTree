@@ -37,9 +37,9 @@ namespace FolderTree
                     saveFileDialog.DefaultExt = "json";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        using (StreamWriter file = System.IO.File.CreateText(saveFileDialog.FileName))
+                        using (StreamWriter file = File.CreateText(saveFileDialog.FileName))
                         {
-                            var folder = TreeFolderService.GenerateTree(pathTextBox.Text);
+                            var folder = FolderTreeService.GenerateTree(pathTextBox.Text);
                             var serializer = new JsonSerializer();
                             file.Write(JsonConvert.SerializeObject(folder, Formatting.Indented));
                         }

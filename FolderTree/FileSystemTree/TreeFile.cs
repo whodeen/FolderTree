@@ -2,6 +2,10 @@
 
 namespace FileSystemTree
 {
+    //
+    //  Summary:
+    //      Model for File in file system
+    //
     class TreeFile : FileSystemEssence
     {
         [JsonProperty(PropertyName = "Size", Order = 2)]

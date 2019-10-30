@@ -5,6 +5,10 @@ using Newtonsoft.Json;
 
 namespace FileSystemTree
 {
+    //
+    //  Summary:
+    //      A model for Directory in file system
+    //
     class TreeFolder : FileSystemEssence
     {
         [JsonProperty(PropertyName = "Children", Order = 4)]

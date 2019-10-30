@@ -7,8 +7,23 @@ using System.Threading.Tasks;
 
 namespace FileSystemTree
 {
-    class TreeFolderService
+    //
+    //  Summary:
+    //      Class which is serving to work with TreeFolder-objects
+    //
+    class FolderTreeService
     {
+        //
+        //  Summary:
+        //      Generates a tree of folders with subfolders and files.
+        //
+        //  Parameters:
+        //      value:
+        //          String path to directory
+        //
+        //  Returns:
+        //      Returns an object of TreeFolder class
+        //
         public static TreeFolder GenerateTree (string path)
         {
             DirectoryInfo currentDirectory = new DirectoryInfo(path);
