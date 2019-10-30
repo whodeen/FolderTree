@@ -16,33 +16,5 @@ namespace FileSystemTree
         [JsonProperty(PropertyName ="DateCreated", Order = 2)]
         public DateTime DateCreated { get; set; }
 
-
-        public TreeFolder(string path)
-        {
-            var currentDirectory = new DirectoryInfo(path);
-            Name = currentDirectory.Name;
-            DateCreated = currentDirectory.CreationTime;
-
-            foreach (var fileInfo in currentDirectory.GetFiles())
-            {
-                var file = new TreeFile
-                {
-                    Name = fileInfo.Name,
-                    Path = fileInfo.FullName,
-                    Size = fileInfo.Length
-                };
-
-                Files.Add(file);
-            }
-
-            foreach (DirectoryInfo directoryInfo in currentDirectory.GetDirectories())
-            {
-                var subFolder = new TreeFolder(directoryInfo.FullName);
-
-                Children.Add(subFolder);
-            }
-
-        }
-
     }
 }
