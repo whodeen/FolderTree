@@ -39,7 +39,7 @@ namespace FolderTree
                     {
                         using (StreamWriter file = System.IO.File.CreateText(saveFileDialog.FileName))
                         {
-                            var folder = new TreeFolder(pathTextBox.Text);
+                            var folder = TreeFolderService.GenerateTree(pathTextBox.Text);
                             var serializer = new JsonSerializer();
                             file.Write(JsonConvert.SerializeObject(folder, Formatting.Indented));
                         }

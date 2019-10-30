@@ -1,11 +1,8 @@
 ﻿namespace FileSystemTree
 {
-    class FileSystemEssence
+    abstract class FileSystemEssence
     {
         public string Name { get; set; }
-        public FileSystemEssence()
-        {
-
-        }
+        
     }
 }
