@@ -32,11 +32,12 @@
             this.openButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.warning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(162, 63);
+            this.openButton.Location = new System.Drawing.Point(162, 55);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(103, 35);
             this.openButton.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(12, 63);
+            this.saveButton.Location = new System.Drawing.Point(12, 55);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(103, 35);
             this.saveButton.TabIndex = 1;
@@ -61,11 +62,22 @@
             this.pathTextBox.Size = new System.Drawing.Size(253, 22);
             this.pathTextBox.TabIndex = 3;
             // 
+            // warning
+            // 
+            this.warning.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.warning.ForeColor = System.Drawing.Color.Red;
+            this.warning.Location = new System.Drawing.Point(12, 95);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(253, 19);
+            this.warning.TabIndex = 4;
+            this.warning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FolderTreeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 110);
+            this.ClientSize = new System.Drawing.Size(277, 123);
+            this.Controls.Add(this.warning);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openButton);
@@ -81,6 +93,7 @@
         private System.Windows.Forms.Button openButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.TextBox pathTextBox;
+        private System.Windows.Forms.Label warning;
     }
 }
 

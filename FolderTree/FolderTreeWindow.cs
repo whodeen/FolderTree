@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using FileSystem;
 using Newtonsoft.Json;
@@ -17,9 +16,7 @@ namespace FolderTree
         private void OpenButton_Click(object sender, EventArgs e)
         {
 
-            //TESTING HOW FOLDER BROWSING WORKS
-
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            var folderBrowserDialog = new FolderBrowserDialog();
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
@@ -30,18 +27,32 @@ namespace FolderTree
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "JSON Files | *.json";
-            saveFileDialog.DefaultExt = "json";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (pathTextBox.Text != "")
             {
-                using (StreamWriter file = System.IO.File.CreateText(saveFileDialog.FileName))
+                var directoryInfo = new DirectoryInfo(pathTextBox.Text);
+                if (directoryInfo.Exists)
                 {
-                    Folder folder = new Folder(pathTextBox.Text);
-                    JsonSerializer serializer = new JsonSerializer();
-                    file.Write(JsonConvert.SerializeObject(folder, Formatting.Indented));
+                    var saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "JSON Files | *.json";
+                    saveFileDialog.DefaultExt = "json";
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        using (StreamWriter file = System.IO.File.CreateText(saveFileDialog.FileName))
+                        {
+                            var folder = new TreeFolder(pathTextBox.Text);
+                            var serializer = new JsonSerializer();
+                            file.Write(JsonConvert.SerializeObject(folder, Formatting.Indented));
+                        }
+                    }
                 }
+                else
+                {
+                    warning.Text = "Folder path is invalid";
+                }
+            }
+            else
+            {
+                warning.Text = "Folder path can't be empty";
             }
         }
     }
