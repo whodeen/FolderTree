@@ -38,7 +38,7 @@
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(162, 65);
+            this.openButton.Location = new System.Drawing.Point(237, 80);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(103, 35);
             this.openButton.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(12, 65);
+            this.saveButton.Location = new System.Drawing.Point(12, 80);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(103, 35);
             this.saveButton.TabIndex = 1;
@@ -60,14 +60,14 @@
             // 
             this.pathTextBox.Location = new System.Drawing.Point(12, 18);
             this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.Size = new System.Drawing.Size(253, 22);
+            this.pathTextBox.Size = new System.Drawing.Size(328, 22);
             this.pathTextBox.TabIndex = 3;
             // 
             // warning
             // 
             this.warning.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.warning.ForeColor = System.Drawing.Color.Red;
-            this.warning.Location = new System.Drawing.Point(12, 43);
+            this.warning.Location = new System.Drawing.Point(50, 58);
             this.warning.Name = "warning";
             this.warning.Size = new System.Drawing.Size(253, 19);
             this.warning.TabIndex = 4;
@@ -77,12 +77,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 105);
+            this.ClientSize = new System.Drawing.Size(352, 120);
             this.Controls.Add(this.warning);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(370, 167);
+            this.MinimumSize = new System.Drawing.Size(370, 167);
             this.Name = "FolderTreeWindow";
             this.Text = "FolderTree";
             this.ResumeLayout(false);
